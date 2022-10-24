@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*////////////////////////////////////////*/
+:root{
+  --inputBackground: rgb(25,25,25);
+  --inputTextColor: rgb(230,230,230);
+}
+body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./bg.jpg);
+}
+button {
+  font-size: 0.9em;
+  padding: 0.6em;
+}
+input{
+  font-size: 0.9em;
+  padding: 0.6em;
+  border: none;
+  background-color: var(--inputBackground);
+  color: var(--inputTextColor);
+}
+input + span {
+  position: relative;
+  margin-left: 1rem;
+  font-size: 1.3em;
+}
+input:invalid{
+  border-bottom: 2px red solid;
+}
+input:invalid + span::after{
+  color: black;
+  background-color: transparent;
+  content: "Wrong format";
+}
+input:valid{
+  border-bottom: 2px solid green;
+}
+input:valid + span::after{
+  color: black;
+  background-color: transparent;
+  content: "Valid";
+}
+input:placeholder-shown {
+  border-bottom: 2px solid black;
+}
+input:placeholder-shown + span::after{
+  color: black;
+  background-color: transparent;
+  content: "This field is required";
+}
+
+input:focus{
+  outline: none;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+}
+
+/*//////////////////////////////////*/
+.login-form{
+  display: flex;
+  /* margin-right: 10rem; */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:center;
+  height: 100%;
+}
+.login-form button {
+  font-size: 0.9em;
+  margin: 2rem;
+  padding: 1rem 2rem;
+}
+.login-inputs ul{
+  display: flex;
+  /* margin-bottom: 4rem; */
+}
+.login-inputs li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.login-inputs input{
+  margin-left: 1rem;
+}
+.hide {
+  display: none;
+}
