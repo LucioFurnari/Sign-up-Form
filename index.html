@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sign-up-Form</title>
+</head>
+<body>
+    <div class="form-container">
+    <form class="login-form" action="" method="post">
+            <h2>Welcome</h2>
+            <div class="login-inputs">
+                <ul>
+                <li>
+                    <input type="email" name="user_name" placeholder="username@example.com" required/>
+                    <span></span>
+                </li>   
+                <li>
+                    <input type="password" name="user_pass" placeholder="********" required/>
+                    <span></span>
+                </li>   
+                </ul>   
+            </div>  
+            <button type="submit">Log in</button>
+            <p>Need a account ?.<a>Sign up</a></p>
+    </form>
+    </div>
+    <div class="form-container">
+    <form class="signup-form" accept="" method="post">
+        <fieldset>
+        <legend>Signup</legend>
+        <ul>
+            <li>
+                <input type="text" name="user_fname" placeholder="First name" required pattern="^[a-z0-9_-]{3,15}$"/>
+            </li> 
+            <li>
+                <input type="text" name="user_lname" placeholder="Last name" required/>
+            </li>   
+            <li>
+                <input type="email" name="user_email" placeholder="Email" required pattern="((\w+.|-)?\w+(.|-\w+)?[^-|.])@\w{3,}(-\w+)?\.\w{2,}(.\w{2,})?"/>
+            </li>
+            <li>
+                <input type="password" name="user_pass" placeholder="Password" required/>
+            </li>
+            <li>
+                <input type="password" placeholder="Repeat password" required/>
+            </li>
+            <li>
+                <button type="submit">Sign up</button>
+            </li>
+        </ul>
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>
