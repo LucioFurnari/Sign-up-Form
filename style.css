@@ -136,6 +136,7 @@ fieldset {
 }
 .form-container{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   width: 50%;
@@ -168,6 +169,7 @@ fieldset {
 }
 .login-inputs ul{
   display: flex;
+  flex-wrap: wrap;
   background-color: var(--inputBackground);
   padding: 3rem;
 }
@@ -203,7 +205,7 @@ fieldset {
 }
 .signup-form ul{
   display: flex;
-  /* padding: 3em; */
+  flex-wrap: wrap;
   background-color: var(--inputBackground);
   width: 100%;
 }
