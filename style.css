@@ -52,6 +52,10 @@ table {
   --inputBackground: rgb(25,25,25);
   --inputTextColor: rgb(230,230,230);
 }
+h2 {
+  font-size: 3em;
+  margin-left: 3em;
+}
 body{
   display: flex;
   justify-content: space-between;
@@ -76,12 +80,12 @@ input + span {
   position: relative;
   margin-left: 1rem;
   font-size: 1.3em;
+  color: var(--inputTextColor);
 }
 input:invalid{
   border-bottom: 2px red solid;
 }
 input:invalid + span::after{
-  color: black;
   background-color: transparent;
   content: "Wrong format";
 }
@@ -89,7 +93,6 @@ input:valid{
   border-bottom: 2px solid green;
 }
 input:valid + span::after{
-  color: black;
   background-color: transparent;
   content: "Valid";
 }
@@ -97,9 +100,8 @@ input:placeholder-shown {
   border-bottom: 2px solid black;
 }
 input:placeholder-shown + span::after{
-  color: black;
   background-color: transparent;
-  content: "This field is required";
+  content: "";
 }
 
 input:focus{
@@ -117,25 +119,36 @@ fieldset {
   justify-content: center;
   width: 50%;
   height: 100vh;
+  background-color: rgba(255,255,255, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
-
+.hide {
+  display: none;
+}
 /*//////////////////////////////////*/
 .login-form{
   display: flex;
   /* margin-right: 10rem; */
   flex-direction: column;
   align-items: flex-start;
-  justify-content:center;
-  height: 100%;
+  justify-content:space-around;
+  height: 50%;
 }
 .login-form button {
+  border: none;
   font-size: 0.9em;
   margin: 2rem;
   padding: 1rem 2rem;
+  margin-left: 10em;
+}
+.login-inputs{
+  width: 100%;
 }
 .login-inputs ul{
   display: flex;
-  /* margin-bottom: 4rem; */
+  background-color: var(--inputBackground);
+  padding: 3rem;
 }
 .login-inputs li {
   display: flex;
@@ -145,6 +158,34 @@ fieldset {
 .login-inputs input{
   margin-left: 1rem;
 }
-.hide {
-  display: none;
+
+
+/*/////////////////////////////////////////*/
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--inputBackground);
+  color: var(--inputTextColor);
+}
+.signup-form input,label {
+  margin-left: 1rem;
+}
+.signup-form button{
+  border: none;
+  font-size: 0.9em;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  margin-left: 10em;
+}
+.signup-form ul{
+  display: flex;
+}
+.signup-form li{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  margin-left: 2em;
 }
