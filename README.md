@@ -2,7 +2,7 @@
 
 Sign-up and login form in the same page.
 
-The user can use the sign-up form and select to use the login form, the form that is not used is hidden.
+Can use the sign-up form and select to use the login form, the form that is not used is hidden.
 
 
 - Create a sign-up form.
