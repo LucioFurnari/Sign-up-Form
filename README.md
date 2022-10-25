@@ -4,6 +4,7 @@ Sign-up and login form in the same page.
 
 Can use the sign-up form and select to use the login form, the form that is not used is hidden.
 
+### Sign-up Form
 
 - Create a sign-up form.
     - Need to have:
@@ -12,6 +13,9 @@ Can use the sign-up form and select to use the login form, the form that is not 
         - Password and repeat password inputs.
     - Each input need to be required and have a pattern. The input that are required need a mark.
     - If the input is valid or not, show a span with a message indicated. And change the color of the input.
+
+### Login Form
+
 - Create a login form. 
     - Need to have:
         - User e-mail input.
