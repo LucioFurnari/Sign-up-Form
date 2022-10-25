@@ -1,4 +1,4 @@
-# Sign-up-Form-
+# Sign-up-Form
 
 Sign-up and login form in the same page.
 
