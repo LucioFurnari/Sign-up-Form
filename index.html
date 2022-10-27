@@ -45,30 +45,30 @@
                 <span></span>
             </li> 
             <li>
+                <label for="last_name"><abbr>*</abbr> Last name: </label>
+                <input type="text" id="last_name" name="user_lname" placeholder="Furnari" minlength="3" maxlength="15" pattern="^[a-zA-Z]{3,15}$" required />
+                <span></span>
+            </li> 
+            <li>
                 <label id="email"><abbr>*</abbr> E-mail: </label>
                 <input type="email" id="email" name="user_email" placeholder="username@gmail.com" required pattern="((\w+.|-)?\w+(.|-\w+)?[^-|.])@\w{3,}(-\w+)?\.\w{2,}(.\w{2,})?"/>
                 <span></span>
             </li>
+        </ul>  
+        <ul class="list-container"> 
             <li>
                 <label for="pass"><abbr>*</abbr> Password: </label>
                 <input type="password" id="pass" name="user_pass" placeholder="Password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$" required/>
                 <span></span>
             </li>
-        </ul>  
-        <ul class="list-container">
-            <li>
-                <label for="last_name"><abbr>*</abbr> Last name: </label>
-                <input type="text" id="last_name" name="user_lname" placeholder="Furnari" minlength="3" maxlength="15" pattern="^[a-zA-Z]{3,15}$" required />
-                <span></span>
-            </li>  
-            <li>
-                <label id="phone_number">Phone number: </label>
-                <input type="tel" id="phone_number" name="user_tel" placeholder="2477503897"  pattern="^[1-9]{1,14}$"/>
-            </li>
             <li>
                 <label for="repeat_pass"><abbr>*</abbr> Repeat password: </label>
                 <input type="password" id="repeat_pass" placeholder="Repeat password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$" required/>
                 <span></span>
+            </li>
+            <li>
+                <label id="phone_number">Phone number: </label>
+                <input type="tel" id="phone_number" name="user_tel" placeholder="2477503897"  pattern="^[1-9]{1,14}$"/>
             </li>
         </ul>
         <div class="btn-container">
