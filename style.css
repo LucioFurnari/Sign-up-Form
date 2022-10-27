@@ -209,7 +209,8 @@ input:invalid:focus{
   flex-wrap: wrap;
   padding: 4rem;
   background-color: var(--inputBackground);
-  min-width: 300px;
+  min-width: 100px;
+  max-width: 100%;
 }
 .list-container li {
   display: flex;
