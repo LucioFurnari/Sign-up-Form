@@ -60,18 +60,18 @@ table {
   --buttonTextHoverColor:rgb(30,30,30);
 }
 h2 {
-  font-size: 3em;
-  margin-left: 1em;
-  padding: 0.4em;
+  font-size: 3rem;
+  margin-left: 1rem;
+  padding: 0.4rem;
 }
 h3 {
-  margin: 1em;
+  margin: 1rem;
 }
 label {
   color: var(--inputTextColor);
 }
 p{
-  padding: 1em;
+  padding: 1rem;
 }
 body{
   background-position: center;
@@ -79,6 +79,7 @@ body{
   background-size: cover;
   background-image: url(./bg.jpg);
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 }
 button {
   background-color: var(--buttonBgColor);
@@ -89,8 +90,8 @@ button:hover{
   color: var(--buttonTextHoverColor);
 }
 input{
-  font-size: 0.9em;
-  padding: 1em;
+  font-size: 0.9rem;
+  padding: 1rem;
   border: none;
   background-color: var(--inputBackground);
   color: var(--inputTextColor);
@@ -176,7 +177,7 @@ input:invalid:focus{
 }
 
 .form-container{
-  height: 100vh;
+  height: 100%;
   max-width: 50%;
   background-color: rgba(255,255,255, 0.5);
   backdrop-filter: blur(20px);
@@ -208,9 +209,10 @@ input:invalid:focus{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 1rem;
   background-color: var(--inputBackground);
   max-width: 100%;
+  min-height: 100px;
 }
 .list-container li {
   display: flex;
@@ -218,7 +220,8 @@ input:invalid:focus{
   align-content: center;
   justify-content: center;
   min-width: 1rem;
-  max-width: 16rem
+  max-width: 16rem;
+  padding: 1rem;
 }
 .list-container li input {
   width: 100%;
@@ -245,4 +248,13 @@ input:invalid:focus{
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+/*------------------------ Media Query --------------------------------*/
+
+@media only screen and (max-width: 1600px) {
+.list-container{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 }
