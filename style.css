@@ -105,7 +105,7 @@ input:invalid{
 }
 input[type="text"]:invalid + span::after{
   background-color: transparent;
-  content: "Only use letters";
+  content: "Only use letters min 3 characters";
 }
 input[type="password"]:invalid + span::after{
   background-color: transparent;
