@@ -207,8 +207,9 @@ input:invalid:focus{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 4rem;
   background-color: var(--inputBackground);
+  min-width: 300px;
 }
 .list-container li {
   display: flex;
@@ -222,6 +223,7 @@ input:invalid:focus{
 }
 .list-container span{
   max-width: 10rem;
+  max-height: 1rem;
 }
 
 .btn-container button{
