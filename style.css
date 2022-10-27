@@ -54,6 +54,10 @@ table {
   --titleTextColor: rgb(25,25,25);
   --inputInValidColor: rgb(231, 5, 5);
   --inputValidColor: rgb(43, 206, 37);
+  --buttonBgColor: rgb(30, 30, 30);
+  --buttonTextColor: rgb(255,255,255);
+  --buttonBgHoverColor:rgb(230,230,230);
+  --buttonTextHoverColor:rgb(30,30,30);
 }
 h2 {
   font-size: 3em;
@@ -66,10 +70,10 @@ h3 {
 label {
   color: var(--inputTextColor);
 }
+p{
+  padding: 1em;
+}
 body{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,8 +81,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 button {
-  font-size: 0.9em;
-  padding: 0.6em;
+  background-color: var(--buttonBgColor);
+  color: var(--buttonTextColor);
+}
+button:hover{
+  background-color: var(--buttonBgHoverColor);
+  color: var(--buttonTextHoverColor);
 }
 input{
   font-size: 0.9em;
@@ -90,8 +98,6 @@ input{
 input + span {
   display: inline-block;
   margin-left: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.9em;
   color: var(--inputTextColor);
 }
 input:invalid{
@@ -103,7 +109,7 @@ input[type="text"]:invalid + span::after{
 }
 input[type="password"]:invalid + span::after{
   background-color: transparent;
-  content: "Minimum eight characters";
+  content: "Required: At least 8 characters, 1 Upper, 1 Lower, 1 Number, 1 Special";
 }
 input[type="email"]:invalid + span::after{
   background-color: transparent;
@@ -114,6 +120,24 @@ input[type="tel"]:not(:valid) + span::after{
   content: "Not a valid phone number";
 }
 
+.login-pass:valid:focus{
+  border-bottom: 2px solid black;
+}
+.login-email:valid:focus{
+  border-bottom: 2px solid black;
+}
+.login-email:valid{
+  border-bottom: 2px solid black;
+}
+
+.login-email:valid + span::after{
+  border-bottom: 2px solid black;
+  content: ""
+}
+.login-pass:valid + span::after{
+  border-bottom: 2px solid black;
+  content: ""
+}
 input:valid{
   border-bottom: 2px solid var(--inputValidColor);
 }
@@ -151,18 +175,9 @@ input:invalid:focus{
   border-bottom: 2px solid var(--inputInValidColor);
 }
 
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .form-container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
   height: 100vh;
+  max-width: 50%;
   background-color: rgba(255,255,255, 0.5);
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
@@ -170,71 +185,60 @@ fieldset {
 .hide {
   display: none;
 }
-/*//////////////////////////////////*/
-.login-form{
-  display: flex;
 
+.btn-container{
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content:space-around;
-  height: 50%;
-}
-.login-form button {
-  border: none;
-  font-size: 0.9em;
-  margin: 2rem;
-  padding: 1rem 2rem;
-  margin-left: 10em;
-}
-
-.login-inputs ul{
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  background-color: var(--inputBackground);
-  padding: 3rem;
-  width: 40rem;
-}
-.login-inputs li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.login-inputs input{
-  margin-left: 1rem;
+  padding: 2rem;
 }
 
+/*------------------------ Signup Form --------------------------------*/
 
-/*/////////////////////////////////////////*/
-
-.signup-form {
+.signup-form{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  color: var(--titleTextColor);
+  height: 100%;
 }
-.signup-form input,label {
-  margin-left: 1rem;
-}
-.signup-form button{
-  border: none;
-  font-size: 0.9em;
-  margin: 2rem;
-  padding: 1rem 2rem;
-  margin-left: 10em;
-}
-.signup-form ul{
+.list-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding: 2rem;
   background-color: var(--inputBackground);
 }
-.signup-form li{
+.list-container li {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5em;
-  margin-left: 2em;
+  align-content: center;
+  justify-content: center;
+}
+.list-container input {
+  max-width: 10rem;
+  min-width: 100%;
+}
+.list-container span{
+  max-width: 10rem;
+}
+
+.btn-container button{
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+}
+.btn-container p{
+  padding-left: 0;
+}
+
+
+/*------------------------ Login Form --------------------------------*/
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
