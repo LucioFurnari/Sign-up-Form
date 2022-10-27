@@ -217,10 +217,11 @@ input:invalid:focus{
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  min-width: 1rem;
+  max-width: 16rem
 }
-.list-container input {
-  max-width: 10rem;
-  min-width: 100%;
+.list-container li input {
+  width: 100%;
 }
 .list-container span{
   max-width: 10rem;
