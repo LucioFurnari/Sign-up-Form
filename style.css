@@ -228,7 +228,7 @@ input:invalid:focus{
 }
 .list-container span{
   max-width: 10rem;
-  max-height: 1rem;
+  max-height: 3rem;
 }
 
 .btn-container button{
